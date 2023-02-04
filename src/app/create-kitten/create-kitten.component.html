@@ -1,0 +1,46 @@
+<h1>Formulaire d'ajout de chaton</h1>
+
+<form #createKitten="ngForm" (ngSubmit)="onSubmit()">
+  
+    <div class="littlebox">
+        <label for="name">Nom: </label>
+        <input id="name" name="name" type="text" [(ngModel)]="name" required maxlength="15">
+    </div> 
+
+    <!-- <div *ngIf="createKitten.submitted">
+        <span *ngIf="name.errors?.['required']">Un nom est requis.</span>
+    </div> -->
+
+    <div class="littlebox">
+        <label for="race">Race: </label>
+        <input id="race" name="race" type="text" [(ngModel)]="race" required maxlength="30">
+    </div> 
+
+    <!-- <div *ngIf="createKitten.submitted">
+        <span *ngIf="race.errors?.['required']">Une race est requise.</span>
+    </div> -->
+
+    <div class="littlebox">
+        <label for="date">Date de naissance: </label>
+        <input id="date" name="date" type="date" [(ngModel)]="date" required>
+    </div> 
+<!-- 
+    <div *ngIf="createKitten.submitted">
+        <span *ngIf="date.errors?.['required']">Une date de naissance est requise.</span>
+    </div> -->
+
+    <div class="littlebox">
+        <label for="link">Lien vers la photo: </label>
+        <input id="link" name="link" type="text" [(ngModel)]="link" required>
+    </div>
+<!-- 
+    <div *ngIf="createKitten.submitted">
+        <span *ngIf="link.errors?.['required']">Un lien vers la photo est requis.</span>
+    </div> -->
+
+
+    <button type="submit" (click)="display()">Valider</button>
+
+</form>
+
+<app-list-kitten [datas]="content"></app-list-kitten>

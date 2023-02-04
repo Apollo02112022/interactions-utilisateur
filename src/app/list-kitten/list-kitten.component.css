@@ -1,4 +1,4 @@
-/* .bigbox1 {
+.bigbox {
     position: absolute;
     top: 0;
     left: 450px;
@@ -8,15 +8,23 @@ h1 {
     padding-left: 85px;
 }
 
-.bigbox2 {
-    position: absolute;
-    top: 0;
-    left: 900px;
-} 
-
 .box {
     border: 1px solid;
     border-radius: 5px;
     height: 630px;
     width: 400px;
-}  */
+} 
+
+.btn {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+}
