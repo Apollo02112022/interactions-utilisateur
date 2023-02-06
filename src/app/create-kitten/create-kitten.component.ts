@@ -17,6 +17,8 @@ array: object[] = [];
 
 content = this.array;
 
+// valid: boolean = false;
+
 onSubmit(): void {
   console.log(this.name, this.race, this.date, this.link);
 }
@@ -28,9 +30,3 @@ display() {
 }
 
 }
-
-
-// display() {
-//   this.array.push(this.name, this.race, this.date, this.link);
-//   console.log(this.array);
-// }
