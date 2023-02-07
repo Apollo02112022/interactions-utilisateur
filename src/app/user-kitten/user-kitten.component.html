@@ -1,9 +1,21 @@
-<div class="bigbox">
+<div class="bigbox3">
 
-    <h1>Mes chatons</h1>
+    <h1>Mes Chatons</h1>
 
-    <div class="box">
+    <div *ngFor="let data of datasCatAdoption">
+
+        <ul>
+            
+            <li><img [src]="data.link" alt="chat" (mouseover)="show(data)" (mouseout)="hide()"> </li>  
+            
+        </ul>
 
     </div> 
+
+    <div *ngIf="adopt">
+        <p>{{myCat.name}}</p>
+        <p>{{myCat.race}}</p>
+        <p>{{myCat.date}}</p>
+    </div>
 
 </div>

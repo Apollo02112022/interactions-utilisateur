@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Cat } from './cat';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'interactions-utilisateur';
+
+  arrayCat: Cat [] = []; 
+
+  arrayCatAdoption: Cat [] = []; 
+
 }

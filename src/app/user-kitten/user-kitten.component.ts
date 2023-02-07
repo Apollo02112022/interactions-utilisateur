@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Cat } from '../cat';
 
 @Component({
   selector: 'app-user-kitten',
@@ -7,4 +8,20 @@ import { Component } from '@angular/core';
 })
 export class UserKittenComponent {
   
+  adopt = false; 
+
+  myCat: any;
+
+    @Input() datasCatAdoption: Cat [] | undefined;
+
+    show(cat: Cat) {
+      this.myCat = cat;
+      this.adopt = true; 
+    }
+
+    hide() {
+      this.myCat = undefined;
+      this.adopt = false;
+    }
+
 }

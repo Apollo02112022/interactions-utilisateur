@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { race } from 'rxjs';
+import { Cat } from '../cat';
 
 @Component({
   selector: 'app-list-kitten',
@@ -8,12 +8,13 @@ import { race } from 'rxjs';
 })
 export class ListKittenComponent {
 
-  @Input() datas: any = []; 
+  @Input() datasCat: Cat [] | undefined;
+  @Input() datasCatAdoption: Cat [] | undefined;
 
-  test: string = "Coucou!";
-
-  adopt() {
-    console.log(this.test);
+  adopt(cat: Cat, index: number) {
+    this.datasCatAdoption?.push(cat);
+    this.datasCat?.splice(index, 1);
+    console.log(cat, index);
   }
 
 }

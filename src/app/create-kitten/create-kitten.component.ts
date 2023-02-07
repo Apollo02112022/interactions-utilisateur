@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Cat } from '../cat';
 
 @Component({
@@ -8,16 +8,12 @@ import { Cat } from '../cat';
 })
 export class CreateKittenComponent {
 
+@Input() datasCat: Cat [] | undefined;
+
 name: string = "";
 race: string = "";
 date: any; 
 link: string = "";
-
-array: object[] = [];
-
-content = this.array;
-
-// valid: boolean = false;
 
 onSubmit(): void {
   console.log(this.name, this.race, this.date, this.link);
@@ -25,8 +21,8 @@ onSubmit(): void {
 
 display() {
   const cat = new Cat(this.name, this.race, this.date, this.link);
-  this.array.push(cat);
-  console.log(this.array);
+  this.datasCat?.push(cat);
+  console.log(this.datasCat);
 }
 
 }

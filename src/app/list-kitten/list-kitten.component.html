@@ -1,23 +1,17 @@
-<div class="bigbox">
+<div class="bigbox2">
 
-    <h1>Liste de chatons</h1>
+    <h1>Ma liste de chatons</h1>
 
-    <div class="box">
+    <div *ngFor="let data of datasCat; let index = index">
 
-            <div *ngFor="let data of datas">
-
-                <ul>
-                    <li>Nom: {{data.name}}</li>
-                    <li>Race: {{data.race}}</li>
-                    <li>Date de naissance: {{data.date}}</li>
-                    <li><img [src]="data.link" alt="chat"></li>
-                    <button class="btn" (click)="adopt()">Adopter</button>
-                </ul>
-
-            </div>
-
-        
+        <ul>
+            <li>Nom: {{data.name}}</li>
+            <li>Race: {{data.race}}</li>
+            <li>Date de naissance: {{data.date}}</li>
+            <li><img [src]="data.link" alt="chat"></li>
+            <li><button  (click)="adopt(data, index)">Adopter</button></li>
+        </ul>
     
-    </div> 
-    
+    </div>
+
 </div>

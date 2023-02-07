@@ -1,20 +1,25 @@
+.bigbox {
+    border: 1px solid;
+    border-radius: 5px;
+    height: 630px;
+    width: 400px;
+    position: absolute;
+    top: 0;
+    left: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
 form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 35px;
-    border: 1px solid;
-    border-radius: 5px;
-    height: 630px;
-    width: 400px;
 }
 
 .littlebox {
     display: flex;
 } 
-
-
-/* .ok {
-    background-color: greenyellow;
-} */

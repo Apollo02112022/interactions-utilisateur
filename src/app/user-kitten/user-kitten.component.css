@@ -1,16 +1,26 @@
-.bigbox {
+.bigbox3 {
+    height: 630px;
+    width: 400px;
+    border: 1px solid;
+    border-radius: 5px;
     position: absolute;
     top: 0;
-    left: 890px;
+    left: 895px;
 }
 
 h1 {
-    text-align: center;
+    text-align: left;
+    padding-left: 110px;
 }
 
-.box {
-    border: 1px solid;
+ul {
+    list-style-type: none;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    border: 2px solid;
     border-radius: 5px;
-    height: 630px;
-    width: 400px;
-} 
+    margin-left: 80px;
+}

@@ -1,18 +1,5 @@
-<app-create-kitten></app-create-kitten>
+<app-create-kitten [datasCat]="arrayCat"></app-create-kitten>
 
-<app-list-kitten></app-list-kitten>
+<app-list-kitten [datasCat]="arrayCat" [datasCatAdoption]="arrayCatAdoption"></app-list-kitten>
 
-<app-user-kitten></app-user-kitten>
-
-
-<!-- <div class="bigbox1">
-
-    <h1>Liste de chatons</h1> 
-
-    <div class="box">
-        
-        <app-user-kitten class="bigbox2"></app-user-kitten> 
-
-    </div>
-
-</div> -->
+<app-user-kitten [datasCatAdoption]="arrayCatAdoption"></app-user-kitten>

@@ -1,46 +1,48 @@
-<h1>Formulaire d'ajout de chaton</h1>
+<div class="bigbox">
 
-<form #createKitten="ngForm" (ngSubmit)="onSubmit()">
+    <h1>Formulaire d'ajout de chaton</h1>
+
+    <form #createKitten="ngForm" (ngSubmit)="onSubmit()">
   
-    <div class="littlebox">
-        <label for="name">Nom: </label>
-        <input id="name" name="name" type="text" [(ngModel)]="name" #alpha="ngModel" required maxlength="15">
-    </div> 
+        <div class="littlebox">
+            <label for="name">Nom: </label>
+            <input id="name" name="name" type="text" [(ngModel)]="name" #alpha="ngModel" required maxlength="15">
+        </div> 
 
-    <div *ngIf="createKitten.submitted">
-        <span *ngIf="alpha.errors?.['required']">Un nom est requis.</span>
-    </div> 
+        <div *ngIf="createKitten.submitted">
+            <span *ngIf="alpha.errors?.['required']">Un nom est requis.</span>
+        </div> 
 
-    <div class="littlebox">
-        <label for="race">Race: </label>
-        <input id="race" name="race" type="text" [(ngModel)]="race" #beta="ngModel" required maxlength="30">
-    </div> 
+        <div class="littlebox">
+            <label for="race">Race: </label>
+            <input id="race" name="race" type="text" [(ngModel)]="race" #beta="ngModel" required maxlength="30">
+        </div> 
 
-    <div *ngIf="createKitten.submitted">
-        <span *ngIf="beta.errors?.['required']">Une race est requise.</span>
-    </div>
+        <div *ngIf="createKitten.submitted">
+            <span *ngIf="beta.errors?.['required']">Une race est requise.</span>
+        </div>
 
-    <div class="littlebox">
-        <label for="date">Date de naissance: </label>
-        <input id="date" name="date" type="date" [(ngModel)]="date" #gamma="ngModel" required>
-    </div> 
+        <div class="littlebox">
+            <label for="date">Date de naissance: </label>
+                <input id="date" name="date" type="date" [(ngModel)]="date" #gamma="ngModel" required>
+        </div> 
 
-    <div *ngIf="createKitten.submitted">
-        <span *ngIf="gamma.errors?.['required']">Une date de naissance est requise.</span>
-    </div>
+        <div *ngIf="createKitten.submitted">
+            <span *ngIf="gamma.errors?.['required']">Une date de naissance est requise.</span>
+        </div>
 
-    <div class="littlebox">
-        <label for="link">Lien vers la photo: </label>
-        <input id="link" name="link" type="text" [(ngModel)]="link" #delta="ngModel" required>
-    </div>
+        <div class="littlebox">
+            <label for="link">Lien vers la photo: </label>
+            <input id="link" name="link" type="text" [(ngModel)]="link" #delta="ngModel" required>
+        </div>
 
-    <div *ngIf="createKitten.submitted">
-        <span *ngIf="delta.errors?.['required']">Un lien vers la photo est requis.</span>
-    </div>
+        <div *ngIf="createKitten.submitted">
+            <span *ngIf="delta.errors?.['required']">Un lien vers la photo est requis.</span>
+        </div>
 
 
-    <button type="submit" (click)="display()">Valider</button>
+        <button type="submit" (click)="display()">Valider</button>
 
-</form>
+    </form>
 
-<app-list-kitten [datas]="content"></app-list-kitten>
+</div>
