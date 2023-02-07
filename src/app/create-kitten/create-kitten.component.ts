@@ -15,14 +15,22 @@ race: string = "";
 date: any; 
 link: string = "";
 
+ok: boolean = false;
+
 onSubmit(): void {
   console.log(this.name, this.race, this.date, this.link);
 }
 
 display() {
-  const cat = new Cat(this.name, this.race, this.date, this.link);
-  this.datasCat?.push(cat);
-  console.log(this.datasCat);
+  if(this.name.length > 0 && this.race.length > 0 && this.date != undefined && this.link.length > 0) {
+    const cat = new Cat(this.name, this.race, this.date, this.link);
+    this.datasCat?.push(cat);
+    console.log(this.datasCat);
+    this.ok = true;
+    }
+  else if (this.name.length === 0 || this.race.length === 0 || this.date === undefined && this.link.length === 0) {
+    this.ok = false;
+    }
 }
 
 }
